@@ -1,0 +1,7 @@
+{
+  "name": "Ferretec",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
