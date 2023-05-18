@@ -19,7 +19,7 @@ Antes de ejecutar el proyecto, es necesario tener instalado:
 1. Clonar el repositorio
 
 ```
-git clone https://github.com/tu_usuario/ferretec-ionic.git
+git clone https://github.com/ChristianSorianoS/ferretec-ionic.git
 ```
 
 2. Instalar las dependencias
