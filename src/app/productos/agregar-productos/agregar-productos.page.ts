@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductosService } from '../productos.service';
+import { ProductosService } from '../../services/productos.service';
 import { Router } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 
@@ -24,12 +24,14 @@ export class AgregarProductosPage implements OnInit {
   }
 
   agregarProductos(){
-    const name = this.productoForm.get('name')?.value
-    const detalle = this.productoForm.get('detalle')?.value
-    const url = this.productoForm.get('url')?.value
+    if(this.productoForm.valid){
+      const name = this.productoForm.get('name')?.value
+      const detalle = this.productoForm.get('detalle')?.value
+      const url = this.productoForm.get('url')?.value
 
-    this.Servicio.addProductos(name,url,[detalle])
-    this.router.navigate(['/productos'])
+      this.Servicio.addProductos(name,url,detalle)
+      this.router.navigate(['/productos'])
+    }
   }
 
 }

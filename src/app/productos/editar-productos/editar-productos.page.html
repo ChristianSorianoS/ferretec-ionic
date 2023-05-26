@@ -1,13 +1,13 @@
 <ion-header>
   <ion-toolbar color="dark">
     <ion-item color="dark">
-      <ion-label>Agregar Productos</ion-label>
+      <ion-label>Editar Productos</ion-label>
     </ion-item>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <form [formGroup]="productoForm" novalidate>
+  <form [formGroup]="editarProductoForm" novalidate>
   <ion-list>
     <ion-item>
       <ion-label>Nombre </ion-label>
@@ -15,15 +15,15 @@
     </ion-item>
     <ion-item>
       <ion-label>Detalle </ion-label>
-      <ion-input formControlName="detalle" placeholder="Ingrese detalle"></ion-input>
+      <ion-input formControlName="detalle" placeholder="Ingrese detalle" ></ion-input>
     </ion-item>
     <ion-item>
       <ion-label>URL </ion-label>
       <ion-input formControlName="url" placeholder="Ingrese URL de la foto"></ion-input>
     </ion-item>
-    <ion-item *ngIf="productoForm.invalid && (productoForm.dirty || productoForm.touched)"
+    <ion-item *ngIf="editarProductoForm.invalid && (editarProductoForm.dirty || editarProductoForm.touched)"
     color="danger">
-      <ion-label *ngIf="productoForm.controls['name'].errors?.['required']">
+      <ion-label *ngIf="editarProductoForm.controls['name'].errors?.['required']">
         Se debe ingresar un nombre
       </ion-label>
     </ion-item>
@@ -40,8 +40,8 @@
       </ion-button>
       </ion-col>
       <ion-col size="6" class="ion-text-center">
-        <ion-button fill="clear" color="dark" (click)="agregarProductos()">
-          Agregar
+        <ion-button fill="clear" color="dark" (click)="editarProducto()">
+          Guardar
         </ion-button>
       </ion-col>
     </ion-row>

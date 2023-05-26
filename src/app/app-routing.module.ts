@@ -9,10 +9,6 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  },
-  {
     path: 'productos',
     loadChildren: () => import('./productos/productos.module').then( m => m.ProductosPageModule)
   }

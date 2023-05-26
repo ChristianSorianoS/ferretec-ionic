@@ -8,6 +8,7 @@ import { ProductosPageRoutingModule } from './productos-routing.module';
 
 import { ProductosPage } from './productos.page';
 import { AgregarProductosPage } from './agregar-productos/agregar-productos.page';
+import { EditarProductosPage } from './editar-productos/editar-productos.page';
 
 @NgModule({
   imports: [
@@ -18,7 +19,8 @@ import { AgregarProductosPage } from './agregar-productos/agregar-productos.page
     ReactiveFormsModule
   ],
   declarations: [ProductosPage, 
-    AgregarProductosPage],
+    AgregarProductosPage,
+  EditarProductosPage],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class ProductosPageModule {}
