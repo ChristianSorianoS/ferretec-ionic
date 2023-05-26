@@ -37,7 +37,7 @@ export class ProductosService {
   ];
 
   public adapter = new LocalStorage<Producto[]>('db')
-  public db = new LowSync<Producto[]>(this.adapter, [{ id: '', name: '', url: '', details: '' }])
+  public db = new LowSync<Producto[]>(this.adapter, this.productos)
 
   constructor() {  
     this.db.read()
