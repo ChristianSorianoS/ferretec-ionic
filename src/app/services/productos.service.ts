@@ -70,7 +70,7 @@ export class ProductosService {
 
   //Eliminar producto
   deleteProductos(productoID: string){
-    this.db.data = this.db.data.filter( p => {
+    this.db.data = this.db.data.filter( (p: Producto) => {
       return p.id !== productoID
     })
     this.db.write()
@@ -79,7 +79,7 @@ export class ProductosService {
   //buscar producto por ID
   getProductosById(productoID: string){
     return {
-      ...this.db.data.find(p => {
+      ...this.db.data.find((p: Producto) => {
         return p.id === productoID
       })
     }
@@ -87,7 +87,7 @@ export class ProductosService {
 
   //actualizar producto
   updateProducto(id: string, name: string, url: string, details: string){
-    this.db.data.find(p => {
+    this.db.data.find((p: Producto) => {
       if(p.id === id){
         p.name = name
         p.url = url
